@@ -1,0 +1,89 @@
+{
+  "info": {
+    "name": "Furnicraft Indonesia",
+    "tagline": "Custom Furniture Berkualitas untuk Hunian Impian",
+    "description": "Furnicraft Indonesia specializes in custom furniture design and manufacturing. With over 10 years of experience, we transform your space with furniture that reflects your personality and style.",
+    "established": 2014,
+    "experience": "10+ Tahun"
+  },
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "6281234567890",
+    "email": "hello@furnicraft.co.id",
+    "address": "Jl. Industri Raya No. 15, Kawasan Industri Pulogadung, Jakarta Timur 13920",
+    "hours": "Senin - Sabtu: 08.00 - 17.00 WIB"
+  },
+  "services": [
+    {
+      "id": 1,
+      "name": "Custom Furniture Design",
+      "description": "Desain furniture sesuai keinginan dan kebutuhan ruangan Anda. Tim designer profesional siap membantu dari konsep hingga jadi.",
+      "icon": "fa-couch"
+    },
+    {
+      "id": 2,
+      "name": "Interior Consultation",
+      "description": "Konsultasi interior gratis untuk membantu Anda memilih furniture yang tepat untuk setiap ruangan.",
+      "icon": "fa-compass"
+    },
+    {
+      "id": 3,
+      "name": "Custom Cabinet & Wardrobe",
+      "description": "Kabinet dan lemari pakaian custom dengan berbagai pilihan material dan finishing premium.",
+      "icon": "fa-archive"
+    },
+    {
+      "id": 4,
+      "name": "Furniture Restoration",
+      "description": "Jasa renovasi dan restoration furniture lama agar kembali terlihat seperti baru.",
+      "icon": "fa-tools"
+    }
+  ],
+  "why_us": [
+    {
+      "title": "100% Custom",
+      "value": "Setiap furniture dibuat sesuai pesanan"
+    },
+    {
+      "title": "Premium Material",
+      "value": "Menggunakan kayu solid & finishing berkualitas"
+    },
+    {
+      "title": "Garansi 2 Tahun",
+      "value": "Garansi untuk setiap produk yang dibuat"
+    },
+    {
+      "title": "Free Consultation",
+      "value": "Konsultasi desain gratis untuk setiap proyek"
+    }
+  ],
+  "stats": [
+    {"label": "Projects Selesai", "value": "500+" },
+    {"label": "Klien Puas", "value": "350+" },
+    {"label": "Tahun Pengalaman", "value": "10+" },
+    {"label": "Desainer Profesional", "value": "15+" }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Budi Santoso",
+      "role": "Pemilik Rumah",
+      "quote": "Furnicraft bantu kami realize dream living room dengan custom sofa dan TV console. Quality furniture mereka top banget!",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sari Dewi",
+      "role": "Interior Designer",
+      "quote": "Sudah collaborate beberapa kali untuk project klien saya. Komunikasi smooth, delivery on time, dan finish selalu premium.",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ahmad Rizki",
+      "role": "Pemilik Apartemen",
+      "quote": "Order custom wardrobe dan floating shelves untuk apartment 2BR. Installasi rapi, material oke, dan harga masuk akal.",
+      "avatar": "https://randomuser.me/api/portraits/men/67.jpg"
+    }
+  ]
+}
