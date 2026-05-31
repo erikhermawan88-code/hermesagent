@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelajah — AI Tourism Content Platform</title>
+  <meta name="description" content="Platform AI yang membantu游客 researching destinations secara otomatis dan auto-distribute ke Threads, TikTok, YouTube, Instagram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Outfit+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #009F75;
+      --primary-dark: #007a5c;
+      --primary-light: #00c89a;
+      --secondary: #1a1a2e;
+      --accent: #ff6b35;
+      --bg: #f8fafb;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-light: #6b7280;
+      --border: #e5e7eb;
+      --card-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      --radius: 16px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(248,250,251,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    .navbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .nav-logo svg { color: var(--primary); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-light);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary);
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0,159,117,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,107,53,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,159,117,0.1);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid rgba(0,159,117,0.2);
+    }
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      animation: pulse2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 36px;
+      max-width: 500px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,159,117,0.3); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: var(--secondary);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid var(--border);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-item .stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+    .stat-item .stat-label {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .hero-visual {
+      position: relative;
+    }
+    .hero-card {
+      background: white;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .hero-card-header .icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(0,159,117,0.1);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+    .hero-card-header h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--secondary);
+    }
+    .hero-card-header p {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .pipeline-step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pipeline-step:last-child { border-bottom: none; }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-info h4 { font-size: 14px; font-weight: 600; color: var(--secondary); }
+    .step-info p { font-size: 12px; color: var(--text-light); }
+    .hero-float {
+      position: absolute;
+      background: white;
+      border-radius: 14px;
+      padding: 14px 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 3s ease-in-out infinite;
+    }
+    .hero-float.top { top: -20px; right: -20px; }
+    .hero-float.bottom { bottom: -20px; left: -20px; animation-delay: 1.5s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* SECTION COMMON */
+    .section {
+      padding: 100px 24px;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      color: var(--secondary);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-light);
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works { background: white; }
+    .steps-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .step-card {
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      position: relative;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow);
+      border-color: var(--primary);
+    }
+    .step-card .step-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0,159,117,0.1);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .step-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+    .step-card p {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+    .step-card .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 50px;
+      background: rgba(0,159,117,0.08);
+      color: var(--primary);
+      border: 1px solid rgba(0,159,117,0.15);
+    }
+
+    /* PLATFORMS */
+    .platforms { background: var(--secondary); color: white; }
+    .platforms .section-label { color: var(--primary-light); }
+    .platforms .section-title { color: white; }
+    .platforms .section-desc { color: rgba(255,255,255,0.6); }
+    .platforms-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .platform-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .platform-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-4px);
+    }
+    .platform-card .plat-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(0,159,117,0.15);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--primary-light);
+    }
+    .platform-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .platform-card p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+    .platform-card .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+    .platform-card .status .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--primary-light);
+      border-radius: 50%;
+    }
+
+    /* PRICING */
+    .pricing { background: var(--bg); }
+    .pricing-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .price-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      border: 2px solid var(--border);
+      transition: all 0.3s;
+    }
+    .price-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow); }
+    .price-card.popular {
+      border-color: var(--primary);
+      position: relative;
+    }
+    .price-card.popular::before {
+      content: 'Popular';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: 50px;
+    }
+    .price-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+    .price-card .price {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--secondary);
+      margin-bottom: 4px;
+    }
+    .price-card .price span {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+    .price-card .price-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .price-card ul li {
+      font-size: 14px;
+      color: var(--text);
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .price-card ul li:last-child { border-bottom: none; }
+    .price-card ul li svg { color: var(--primary); flex-shrink: 0; }
+    .price-card .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+    }
+    .price-card.popular .btn, .price-card .btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--secondary) 0%, #16213e 100%);
+      padding: 100px 24px;
+      text-align: center;
+      color: white;
+    }
+    .cta-section h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .cta-section p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 36px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-section .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .cta-section .btn-wa:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.3); }
+
+    /* FOOTER */
+    footer {
+      background: var(--secondary);
+      color: rgba(255,255,255,0.5);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: var(--primary-light); }
+    footer a:hover { text-decoration: underline; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 100px; }
+      .hero-stats { gap: 24px; }
+      .platforms-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+        <path d="M2 12h20"/>
+      </svg>
+      Jelajah
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#pricing">Pricing</a>
+      <a href="jelajah/admin/" class="nav-cta">Dashboard</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        AI-Powered Tourism Platform
+      </div>
+      <h1>Budaya indah.<br><span>Jelajahi bersama AI.</span></h1>
+      <p class="hero-desc">Platform AI yang帮我游客 researching destinations secara otomatis — gather data dari20+ sumber, generate konten unik, dan auto-post ke Threads, TikTok, YouTube & Instagram.</p>
+      <div class="hero-actions">
+        <a href="jelajah/admin/" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Buka Dashboard
+        </a>
+        <a href="#how-it-works" class="btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Pelajari Lebih
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Destinations Tracked</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Social Platforms</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">AI Automation</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <h3>Jelajah Agent Pipeline</h3>
+            <p>Otomatis berjalan 24/7</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">1</div>
+          <div class="step-info">
+            <h4>Research Agent</h4>
+            <p>Gather data dari 20+ sources</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">2</div>
+          <div class="step-info">
+            <h4>Content Generator</h4>
+            <p>AI generate article + social posts</p>
+          </div>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-num">3</div>
+          <div class="step-info">
+            <h4>Distribution Agent</h4>
+            <p>Auto-post ke semua platform</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float top">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#009F75" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Content Generated
+      </div>
+      <div class="hero-float bottom">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#009F75" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Live Analytics
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-it-works" id="how-it-works">
+  <div class="section-header">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">AI agent bekerja 24/7, kamu tinggal pantau hasilnya</h2>
+    <p class="section-desc">Dari research sampai distribution — semuanya otomatis. Tanpa perlu tahu coding.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </div>
+      <h3>1. Research Agent</h3>
+      <p>AI automatically gathers data from Google Maps, TripAdvisor, YouTube, Instagram, Reddit, tourism boards, and more.</p>
+      <div class="tag-list">
+        <span class="tag">Google Maps</span>
+        <span class="tag">YouTube</span>
+        <span class="tag">TripAdvisor</span>
+        <span class="tag">Instagram</span>
+        <span class="tag">Reddit</span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <h3>2. Content Generator</h3>
+      <p>Semua data di-recombine jadi article SEO, social posts, dan video script — dalam Bahasa Indonesia & English.</p>
+      <div class="tag-list">
+        <span class="tag">Article</span>
+        <span class="tag">Threads Post</span>
+        <span class="tag">TikTok Script</span>
+        <span class="tag">YouTube Script</span>
+        <span class="tag">Itinerary</span>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      </div>
+      <h3>3. Distribution Agent</h3>
+      <p>Content langsung di-post ke Threads, TikTok, YouTube & Instagram — automatic, scheduled, dan consistent.</p>
+      <div class="tag-list">
+        <span class="tag">Threads</span>
+        <span class="tag">TikTok</span>
+        <span class="tag">YouTube</span>
+        <span class="tag">Instagram</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS -->
+<section class="section platforms" id="platforms">
+  <div class="section-header">
+    <div class="section-label">Distribution Channels</div>
+    <h2 class="section-title">Satu content, empat platform</h2>
+    <p class="section-desc">Generate once, distribute everywhere. Semua dari satu dashboard.</p>
+  </div>
+  <div class="platforms-grid">
+    <div class="platform-card">
+      <div class="plat-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h3>Threads</h3>
+      <p>@sosokberbicara</p>
+      <div class="status"><span class="dot"></span>Connected</div>
+    </div>
+    <div class="platform-card">
+      <div class="plat-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </div>
+      <h3>TikTok</h3>
+      <p>@sosokbicaraclip</p>
+      <div class="status"><span class="dot"></span>Connected</div>
+    </div>
+    <div class="platform-card">
+      <div class="plat-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+      </div>
+      <h3>YouTube</h3>
+      <p>@sosokberbicara</p>
+      <div class="status"><span class="dot"></span>Connected</div>
+    </div>
+    <div class="platform-card">
+      <div class="plat-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <h3>Instagram</h3>
+      <p>@sosokberbicara</p>
+      <div class="status"><span class="dot"></span>Connected</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="section-header">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Mulai gratis, scale sesuai kebutuhan</h2>
+    <p class="section-desc">Mulai dengan destinasi terbatas, upgrade kapan saja.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <h3>Free</h3>
+      <div class="price">Rp 0<span>/bulan</span></div>
+      <div class="price-desc">Untuk coba-coba</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>5 destinations/bulan</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Basic articles</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 social platform</li>
+      </ul>
+      <button class="btn">Mulai Gratis</button>
+    </div>
+    <div class="price-card">
+      <h3>Explorer</h3>
+      <div class="price">Rp 49k<span>/bulan</span></div>
+      <div class="price-desc">Untuk content creator</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>30 destinations/bulan</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>All social posts</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 channel posting</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Itinerary generator</li>
+      </ul>
+      <button class="btn">Pilih Explorer</button>
+    </div>
+    <div class="price-card popular">
+      <h3>Pro</h3>
+      <div class="price">Rp 149k<span>/bulan</span></div>
+      <div class="price-desc">Untuk profesional</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited destinations</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>All 4 channels</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>API access</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Video script generator</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Analytics dashboard</li>
+      </ul>
+      <button class="btn">Pilih Pro</button>
+    </div>
+    <div class="price-card">
+      <h3>Agency</h3>
+      <div class="price">Rp 399k<span>/bulan</span></div>
+      <div class="price-desc">Untuk agency/multi-account</div>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Everything in Pro</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>White-label</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Multi-account</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Bulk generate</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+      </ul>
+      <button class="btn">Pilih Agency</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Siap memulai perjalananmu?</h2>
+  <p>Hubungi kami untuk demo dan konsultasi gratis.</p>
+  <a href="https://wa.me/6281234567890" class="btn-wa" target="_blank">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.296-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 <a href="#">Jelajah.id</a> — PT Jelajah Indonesia &middot; <a href="jelajah/admin/">Dashboard</a></p>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>
+</body>
+</html>

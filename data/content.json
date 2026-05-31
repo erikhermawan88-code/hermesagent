@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "Jelajah",
+    "tagline": "AI-Powered Tourism Content Platform",
+    "description": "Platform AI yang membantu游客 researching destinations secara otomatis — gather data dari berbagai sumber, di-recombine jadi konten baru, auto-distribute ke Threads, TikTok, YouTube, Instagram.",
+    "company": "PT Jelajah Indonesia",
+    "website": "https://jelajah.id",
+    "email": "hello@jelajah.id"
+  },
+  "destinations": [
+    {
+      "id": "raja-ampat",
+      "name": "Raja Ampat",
+      "location": "West Papua, Indonesia",
+      "category": "beach_island",
+      "status": "active",
+      "description": "Surga bawah laut terbaik di dunia dengan 4.500+ spesies ikan dan 75% spesies karang dunia.",
+      "highlights": ["Wayag Islands", "Misool", "K会自动生成", "Pantai Merah"],
+      "best_time": "Oktober - April",
+      "estimated_cost": "Rp 15.000.000 - 25.000.000",
+      "sources": ["TripAdvisor", "Google Maps", "YouTube Travel Vlogs"],
+      "created_at": "2026-05-31"
+    },
+    {
+      "id": "bromo",
+      "name": "Gunung Bromo",
+      "location": "East Java, Indonesia",
+      "category": "mountain_nature",
+      "status": "active",
+      "description": "Gunung berapi aktif dengan pemandangan matahari terbit yang spektakuler dari viewpoint Penanjakan.",
+      "highlights": ["Penanjakan Sunrise", "Sea of Sand", "Kasar Pass", "Madakaripura Waterfall"],
+      "best_time": "April - Oktober",
+      "estimated_cost": "Rp 3.000.000 - 8.000.000",
+      "sources": ["Google Maps", "Kemenparekraf", "Traveloka"],
+      "created_at": "2026-05-31"
+    },
+    {
+      "id": "labuan-bajo",
+      "name": "Labuan Bajo",
+      "location": "East Nusa Tenggara, Indonesia",
+      "category": "beach_island",
+      "status": "active",
+      "description": "Gerbang menuju Taman Nasional Komodo dengan pantai-pantai eksotis dan diving spots kelas dunia.",
+      "highlights": ["Padar Island", "Pink Beach", "Komodo Island", "Taka Makassar"],
+      "best_time": "April - November",
+      "estimated_cost": "Rp 10.000.000 - 20.000.000",
+      "sources": ["TripAdvisor", "Google Maps", "Instagram Travel"],
+      "created_at": "2026-05-31"
+    }
+  ],
+  "articles": [],
+  "social_posts": [],
+  "video_scripts": [],
+  "schedule": {
+    "research_interval": "hourly",
+    "content_generation": "daily",
+    "distribution": "twice_daily",
+    "last_research": null,
+    "last_generation": null,
+    "last_distribution": null
+  },
+  "accounts": {
+    "threads": "@sosokberbicara",
+    "tiktok": "@sosokbicaraclip",
+    "youtube": "@sosokberbicara",
+    "instagram": "@sosokberbicara"
+  },
+  "stats": {
+    "destinations_tracked": 3,
+    "articles_generated": 0,
+    "posts_distributed": 0,
+    "total_reach": 0
+  }
+}
