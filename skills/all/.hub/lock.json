@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "installed": {
+    "agentmail": {
+      "source": "official",
+      "identifier": "official/email/agentmail",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:6e11274d6038cf0e",
+      "install_path": "email/agentmail",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-28T04:51:44.794427+00:00",
+      "updated_at": "2026-05-28T04:51:44.794457+00:00"
+    },
+    "excel-author": {
+      "source": "official",
+      "identifier": "official/finance/excel-author",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:a7b50cbb3ad67441",
+      "install_path": "finance/excel-author",
+      "files": [
+        "SKILL.md",
+        "scripts/recalc.py"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-28T04:51:55.692280+00:00",
+      "updated_at": "2026-05-28T04:51:55.692300+00:00"
+    },
+    "openhands": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents/openhands",
+      "trust_level": "builtin",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:52b5ae34263fbd4c",
+      "install_path": "autonomous-ai-agents/openhands",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-28T04:52:06.211656+00:00",
+      "updated_at": "2026-05-28T04:52:06.211679+00:00"
+    },
+    "pinggy-tunnel": {
+      "source": "official",
+      "identifier": "official/devops/pinggy-tunnel",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:e3068d936a7b5b07",
+      "install_path": "devops/pinggy-tunnel",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-28T04:52:07.612566+00:00",
+      "updated_at": "2026-05-28T04:52:07.612590+00:00"
+    },
+    "honcho": {
+      "source": "official",
+      "identifier": "official/autonomous-ai-agents/honcho",
+      "trust_level": "builtin",
+      "scan_verdict": "dangerous",
+      "content_hash": "sha256:1fb55ee9e3108355",
+      "install_path": "autonomous-ai-agents/honcho",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {},
+      "installed_at": "2026-05-28T04:52:08.901712+00:00",
+      "updated_at": "2026-05-28T04:52:08.901726+00:00"
+    }
+  }
+}

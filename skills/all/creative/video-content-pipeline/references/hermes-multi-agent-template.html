@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f2c4a;
+      --navy-dark: #071a2e;
+      --teal: #0d7377;
+      --teal-light: #14a3a8;
+      --gold: #d4a843;
+      --bg: #fafbfc;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #868e96;
+      --border: #e9ecef;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { color: var(--teal-light); }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+
+    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; }
+    nav .logo { color: white; font-weight: 700; font-size: 1.1rem; }
+    nav .logo span { color: var(--teal-light); }
+    nav .nav-links { display: flex; gap: 2rem; }
+    nav .nav-links a { color: rgba(255,255,255,0.7); font-size: .9rem; font-weight: 500; }
+    nav .nav-links a:hover { color: white; }
+
+    .hero { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #0a3d4a 100%); color: white; padding: 5rem 2rem; text-align: center; }
+    .hero .badge { display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: .4rem 1rem; font-size: .8rem; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+    .hero h1 .accent { color: var(--gold); }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2rem; }
+    .hero .video-link { display: inline-flex; align-items: center; gap: .5rem; background: var(--teal); color: white; padding: .75rem 1.5rem; border-radius: var(--radius); font-weight: 600; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .intro { background: var(--surface); border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow); }
+    .intro h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy); }
+    .intro p { color: var(--text-muted); }
+    .intro .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .intro .feature { background: var(--bg); border-radius: 10px; padding: 1rem; display: flex; align-items: center; gap: .75rem; }
+    .intro .feature .icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .intro .feature .label { font-weight: 600; font-size: .9rem; }
+    .intro .feature .sub { font-size: .75rem; color: var(--text-muted); }
+
+    .step { background: var(--surface); border-radius: var(--radius); padding: 2rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); border-left: 4px solid var(--teal); }
+    .step-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+    .step-number { background: var(--teal); color: white; font-weight: 800; font-size: .9rem; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-title h3 { font-size: 1.25rem; color: var(--navy); margin-bottom: .25rem; }
+    .step-title .subtitle { font-size: .85rem; color: var(--text-muted); }
+
+    pre { background: var(--navy-dark); color: #e0e0e0; padding: 1.25rem; border-radius: 10px; overflow-x: auto; font-size: .85rem; line-height: 1.6; margin: 1rem 0; }
+
+    .note { background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; display: flex; gap: .75rem; }
+    .note .icon { font-size: 1.2rem; }
+    .note p { font-size: .9rem; color: #5d4037; }
+
+    .warning { background: #fff3e0; border: 1px solid #ffb74d; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .warning p { font-size: .9rem; color: #e65100; }
+
+    .prompt-block { background: #f0f4f8; border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; }
+    .prompt-block h4 { font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1rem; }
+    .prompt-block pre { background: white; border: 1px solid var(--border); color: var(--text); }
+
+    .section-divider { text-align: center; margin: 3rem 0 2rem; position: relative; }
+    .section-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); }
+    .section-divider span { background: var(--bg); padding: 0 1rem; position: relative; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); }
+
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 2rem; font-size: .85rem; }
+    footer a { color: var(--teal-light); }
+
+    @media (max-width: 640px) {
+      nav .nav-links { display: none; }
+      .hero { padding: 3rem 1.5rem; }
+      .container { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">⚡ <span>{{BRAND}}</span> Guide</div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#steps">Steps</a>
+    <a href="#prompts">Prompts</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">📺 Step-by-Step Video Guide</div>
+  <h1>{{HERO_HEADING}}</h1>
+  <p>{{HERO_SUBTITLE}}</p>
+  <a href="{{VIDEO_URL}}" class="video-link" target="_blank">▶ Watch Original Video</a>
+</section>
+
+<div class="container">
+
+<div id="overview" class="intro">
+  <h2>What You're Building</h2>
+  <p>{{OVERVIEW_DESCRIPTION}}</p>
+  <div class="features">
+    <div class="feature">
+      <div class="icon">📊</div>
+      <div><div class="label">{{FEATURE_1_LABEL}}</div><div class="sub">{{FEATURE_1_SUB}}</div></div>
+    </div>
+    <div class="feature">
+      <div class="icon">💬</div>
+      <div><div class="label">{{FEATURE_2_LABEL}}</div><div class="sub">{{FEATURE_2_SUB}}</div></div>
+    </div>
+    <div class="feature">
+      <div class="icon">📄</div>
+      <div><div class="label">{{FEATURE_3_LABEL}}</div><div class="sub">{{FEATURE_3_SUB}}</div></div>
+    </div>
+    <div class="feature">
+      <div class="icon">🔗</div>
+      <div><div class="label">{{FEATURE_4_LABEL}}</div><div class="sub">{{FEATURE_4_SUB}}</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STEPS GO HERE -->
+{{STEPS_CONTENT}}
+
+</div>
+
+<footer>
+  <p>Based on the YouTube tutorial — <a href="{{VIDEO_URL}}" target="_blank">Watch the original video</a></p>
+  <p style="margin-top: .5rem;">Built with Hermes Agent</p>
+</footer>
+
+</body>
+</html>

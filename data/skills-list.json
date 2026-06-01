@@ -1,0 +1,186 @@
+[
+  {
+    "name": ".hub",
+    "description": ""
+  },
+  {
+    "name": "agent-soul-routing",
+    "description": ""
+  },
+  {
+    "name": "apple",
+    "description": ""
+  },
+  {
+    "name": "autonomous-ai-agents",
+    "description": ""
+  },
+  {
+    "name": "blackbox",
+    "description": ""
+  },
+  {
+    "name": "clipper",
+    "description": ""
+  },
+  {
+    "name": "clipper-agent",
+    "description": "\"Clipper worker agent for video clipping tasks \u2014 receives YouTube link, extracts best viral moments, creates 20 short clips, and reports status to dashboard.\""
+  },
+  {
+    "name": "clipper-company",
+    "description": ""
+  },
+  {
+    "name": "clipper-workflow",
+    "description": "Workflow Clipper Company untuk Andre\u6253\u7406. YouTube URL masuk, auto-download, 20 clips, upload VPS, schedule Repliz, cleanup old. Executable."
+  },
+  {
+    "name": "creative",
+    "description": ""
+  },
+  {
+    "name": "data-science",
+    "description": ""
+  },
+  {
+    "name": "development",
+    "description": "\"Retro Daya Engineering static site \u2014 conventions, patterns, and workflows for the WordPress-site-to-static migration and ongoing edits.\""
+  },
+  {
+    "name": "devops",
+    "description": ""
+  },
+  {
+    "name": "diagramming",
+    "description": ""
+  },
+  {
+    "name": "dogfood",
+    "description": "\"Exploratory QA of web apps: find bugs, evidence, reports.\""
+  },
+  {
+    "name": "domain",
+    "description": ""
+  },
+  {
+    "name": "email",
+    "description": ""
+  },
+  {
+    "name": "finance",
+    "description": ""
+  },
+  {
+    "name": "gaming",
+    "description": ""
+  },
+  {
+    "name": "gbrain",
+    "description": ""
+  },
+  {
+    "name": "gifs",
+    "description": ""
+  },
+  {
+    "name": "github",
+    "description": ""
+  },
+  {
+    "name": "inference-sh",
+    "description": ""
+  },
+  {
+    "name": "iran-us-news-monitor",
+    "description": ""
+  },
+  {
+    "name": "life-strategy",
+    "description": ""
+  },
+  {
+    "name": "mcp",
+    "description": ""
+  },
+  {
+    "name": "media",
+    "description": ""
+  },
+  {
+    "name": "migration",
+    "description": ""
+  },
+  {
+    "name": "mlops",
+    "description": ""
+  },
+  {
+    "name": "note-taking",
+    "description": ""
+  },
+  {
+    "name": "productivity",
+    "description": ""
+  },
+  {
+    "name": "qmd",
+    "description": ""
+  },
+  {
+    "name": "red-teaming",
+    "description": ""
+  },
+  {
+    "name": "references",
+    "description": ""
+  },
+  {
+    "name": "research",
+    "description": ""
+  },
+  {
+    "name": "seo-ai-search-domination",
+    "description": "Full-stack SEO + AI Search analysis for websites targeting Google AI Overview, ChatGPT, Perplexity, Claude, Gemini, and Bing. Outputs ONLY to designated thread (never personal chat). Deliver via Telegram in 4-6 chunked messages."
+  },
+  {
+    "name": "smart-home",
+    "description": ""
+  },
+  {
+    "name": "social-media",
+    "description": ""
+  },
+  {
+    "name": "software-development",
+    "description": ""
+  },
+  {
+    "name": "subagent",
+    "description": ""
+  },
+  {
+    "name": "telegram",
+    "description": "Integracao completa com Telegram Bot API. Setup com BotFather, mensagens, webhooks, inline keyboards, grupos, canais. Boilerplates Node.js e Python."
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "description": "AI-powered design intelligence \u2014 67 UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines. Use when building landing pages, dashboards, or any web UI for local business clients."
+  },
+  {
+    "name": "web-development",
+    "description": ""
+  },
+  {
+    "name": "website-workflow",
+    "description": "\"Panduan complete workflow bikin website: Adminator dashboard + PHP/JSON backend + public pages, semua sync. Domain: digitalnusa.com, GitHub: hermesagent.\""
+  },
+  {
+    "name": "youtube-clipper",
+    "description": ">"
+  },
+  {
+    "name": "yuanbao",
+    "description": "\"Yuanbao (\u5143\u5b9d) groups: @mention users, query info/members.\""
+  }
+]

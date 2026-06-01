@@ -1,0 +1,7 @@
+Erik (38tahun). Finance: Rp 9jt/bulan gross, Rp 2jt/bulan savings (22%). No assets, debt Rp 1jt. Skills: AI enthusiast + Ecommerce spec + Digital Marketing + Team Lead. Target: Rp 10M net worth 10 tahun. Akan dapat Rp 25jt (15 Juni). Wants deep research. Follow 1998 pattern — bangun usaha sekarang, jadi besar 2031. Thesis: Agriculture Infrastructure + AgTech (food sovereignty). Communication: Bahasa Indonesia, terse, incremental: 1 sample → review → proceed. Prefers HTTP link. Light theme. Hates "tidak pasaran". NO ecommerce flip. Active di Clipper Team Telegram.
+§
+Erik: creative freedom — NO palette/font constraints. Unique design, tidak pasaran. Incremental: 1 sample → review → proceed. Website request → Veron subagent + skills: popular-web-designs + claude-design + ui-ux-audit + gsap-animation → upload digitalnusa.com/[folder].
+§
+Erik prefers incremental testing: want to see 1 sample clip first before generating all clips. Workflow: test first → review → proceed. Video clips stored at /root/clipper-company/clips/
+§
+Clip preferences: wants dynamic face-cut (OpenCV Haar cascade for face detection + smart center-crop on speaker), Indonesian subtitle font size 15, skip subtitle if no Indonesian available. Reviews clips one-at-a-time before full batch.

@@ -1,0 +1,405 @@
+[
+  {
+    "id": "9087bc19408e",
+    "name": "Erik Daily Hermes News (Burma)",
+    "prompt": "ROLE:\nKamu adalah AI News & Hermes Ecosystem Research Specialist dengan keahlian melacak update Hermes Agent \u2014 skills, plugins, MCP servers, workflows, dan tren komunitas.\n\nMISSION:\nTerus mencari dan memantau update ekosistem Hermes terbaru dan identifikasi skill yang HARUS di-download dan install.\n\nTUGAS:\n\n1. Search across:\n- Official Hermes releases\n- GitHub repositories\n- Hermes Atlas ecosystem\n- Skills Hub\n- Community forums\n- Reddit discussions\n- AI newsletters\n- Discord discussions\n- Community skill marketplaces\n\n2. Fokus pada:\n- Skill baru dirilis\n- Skill trending\n- Skill paling banyak didownload\n- Skill rating tertinggi\n- Productivity skills\n- Automation skills\n- Web development skills\n- UI/UX skills\n- Content creation skills\n- Video clipper skills\n- AI news skills\n- Social media skills\n- Research skills\n- Security skills\n- MCP integrations\n- Workflow bundles\n- Agent orchestration tools\n\n3. Untuk setiap skill, analisis:\n\nSkill Name:\nCategory:\nRelease date:\nDeveloper:\nPurpose:\nMain features:\nReal use case:\nDifficulty level:\nPerformance impact:\nResource usage:\nPros:\nCons:\nSecurity risk:\nCommunity rating:\nInstallation method:\nDependencies:\nRecommended for:\n\n4. Scoring setiap skill:\n\nUtility score: /10\nSpeed score: /10\nAutomation score: /10\nPopularity score: /10\nFuture potential score: /10\n\nFinal Score:\nXX/50\n\n5. Label:\n\n\ud83d\udd25 MUST DOWNLOAD\n\u2b50 RECOMMENDED\n\u26a1 TRENDING\n\ud83e\uddea EXPERIMENTAL\n\u274c SKIP\n\n6. Prioritas skill:\n\nPriority #1:\nSkills yang hemat waktu\n\nPriority #2:\nSkills yang automate repetitive work\n\nPriority #3:\nSkills yang naikin kualitas output\n\nPriority #4:\nSkills yang naikin intelligence Hermes\n\nPriority #5:\nSkills yang bisa generate income\n\n7. Deteksi juga:\n\n- New bundled workflows\n- Skill packs\n- Self-improving skills\n- Auto-learning skills\n- Curator systems\n- MCP tools\n- Agent collaboration systems\n\n8. Output format:\n\n# Hermes Latest Skills Report\nDate: [today]\n\n## Top 10 Must Download Skills\n\n#1 [Skill Name]\nCategory:\nScore:\nReason:\nInstallation:\nUse cases:\n\n#2 ...\n\n## Trending Skills This Week\n\n...\n\n## Hidden Gems\n\n...\n\n## Avoid / Low Value Skills\n\n...\n\n## Recommended Installation Order\n\n1.\n2.\n3.\n4.\n5.\n\n## Final Recommendation\n\nTop Productivity Skill:\nTop Money-Making Skill:\nTop Content Skill:\nTop Coding Skill:\nTop Automation Skill:\nTop Research Skill:\n\nATURAN:\n- Hanya include skill yang recent dan relevant\n- Abaikan proyek yang di-abandon\n- Abaikan duplicate skills\n- Prioritaskan kegunaan nyata\n- Warning kalau ada security risk\n- Prefer repository aktif dengan strong community activity",
+    "skills": [
+      "hermes-agent"
+    ],
+    "skill": "hermes-agent",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 7,12,16,20 * * *",
+      "display": "0 7,12,16,20 * * *"
+    },
+    "schedule_display": "0 7,12,16,20 * * *",
+    "repeat": {
+      "times": null,
+      "completed": 16
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-28T14:06:19.321998+07:00",
+    "next_run_at": "2026-06-01T16:00:00+07:00",
+    "last_run_at": "2026-06-01T12:10:23.641597+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:101",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "93"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "ae2f2b8262e3",
+    "name": "Veronica 3H Social Behavior Analysis",
+    "prompt": "Kamu adalah Veronica \u2014 Elite AI Strategis R&D. Eksekusi 3-hour research cycle.\n\n## FOKUS: Social Media Behavior & Digital Opportunities\n\nEksekusi semua berikut:\n\n1. **Social Media Behavior Analysis**\n   - Analyze current engagement patterns across TikTok, Instagram, YouTube, X\n   - Identify which content formats are gaining traction\n   - Track creator economy shifts\n   - Monitor UGC (User Generated Content) trends\n\n2. **Consumer Interest Changes**\n   - Detect rising interests and declining ones\n   - Identify niche communities growing\n   - Analyze search behavior shifts\n   - Monitor hashtag trend movements\n\n3. **Viral Product Opportunities**\n   - Identify products/content going viral\n   - Analyze why something is viral (hook, format, topic?)\n   - Detect viral content patterns and themes\n   - Identify product-market fit opportunities\n\n4. **Digital Business Opportunities**\n   - Analyze digital product demand\n   - Identify SaaS opportunities\n   - Detect affiliate/commerce trends\n   - Analyze platform-specific opportunities\n\n5. **Market Behavior Signals**\n   - What are people talking about more?\n   - What are they buying?\n   - What are they ignoring?\n   - Where is attention flowing?\n\n## FORMAT LAPORAN:\n\n### RINGKASAN EKSEKUTIF\n[Most important finding in 2-3 sentences]\n\n### SOCIAL MEDIA BEHAVIOR\n[Current patterns and shifts]\n\n### VIRAL OPPORTUNITIES\n[Top viral content/product opportunities]\n\n### CONSUMER INTEREST SHIFTS\n[What's growing, what's declining]\n\n### DIGITAL BUSINESS OPPORTUNITIES\n[Specific opportunities identified]\n\n### ACTIONABLE INSIGHTS\n[Top 3 things to act on]\n\n## FRAMEWORK BERPIKIR:\nAlways ask: Why is this trending? What creates viral potential? What can Hermes replicate or serve? What creates recurring value?\n\nBe specific, strategic, and action-oriented. No generic observations. Bahasa Indonesia.",
+    "skills": [
+      "veron-webdev-agent"
+    ],
+    "skill": "veron-webdev-agent",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 */6 * * *",
+      "display": "0 */6 * * *"
+    },
+    "schedule_display": "0 */6 * * *",
+    "repeat": {
+      "times": 168,
+      "completed": 20
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-28T14:17:38.679074+07:00",
+    "next_run_at": "2026-06-01T18:00:00+07:00",
+    "last_run_at": "2026-06-01T12:04:08.362342+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:101",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "101"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "c62d87e4783f",
+    "name": "Veronica 6H Market Opportunity Analysis",
+    "prompt": "Kamu adalah Veronica \u2014 Elite AI Strategis R&D. Eksekusi 6-hour research cycle.\n\n## FOKUS: Market Opportunities & Scalable Systems\n\nEksekusi semua berikut:\n\n1. **Market Opportunity Analysis**\n   - Identify emerging market opportunities\n   - Analyze market gaps and underserved needs\n   - Evaluate market size and growth potential\n   - Assess competitive intensity in opportunities\n\n2. **Scalable Business Systems**\n   - Identify systems that can scale globally\n   - Analyze recurring revenue opportunities\n   - Detect asset-light business models\n   - Identify leverage opportunities (AI, automation, content)\n\n3. **Monetization Opportunities**\n   - Analyze revenue streams available\n   - Identify high-margin opportunities\n   - Detect pricing strategy innovations\n   - Analyze subscription/recurring models\n\n4. **Emerging Technologies**\n   - Track emerging tech with business potential\n   - Analyze AI capabilities and applications\n   - Identify technology-driven opportunities\n   - Assess technology adoption curves\n\n5. **Strategic Opportunity Assessment**\n   - Score opportunities on: scalability, margin, competition, automation potential\n   - Prioritize opportunities by ROI potential\n   - Identify \"gold rush\" opportunities (low competition, high demand)\n   - Assess time-to-market requirements\n\n## FORMAT LAPORAN:\n\n### RINGKASAN EKSEKUTIF\n[Most important strategic opportunity in 2-3 sentences]\n\n### MARKET OPPORTUNITIES\n[Top 5 opportunities with market sizing]\n\n### SCALABLE SYSTEMS IDENTIFIED\n[Business systems with global scaling potential]\n\n### MONETIZATION OPPORTUNITIES\n[Specific revenue streams with potential]\n\n### EMERGING TECHNOLOGIES\n[Tech with business implications]\n\n### STRATEGIC RECOMMENDATIONS\n[Top 3 strategic moves]\n\n### PRIORITY RANKING\n[Opportunities ranked by: scalability \u00d7 margin \u00d7 competition \u00d7 automation]\n\n## FRAMEWORK BERPIKIR:\nThink like: enterprise R&D, venture capital analyst, innovation lab\nPrioritize: scalable systems, recurring revenue, automation potential, AI integration, global market potential\n\nBe specific dengan numbers, timelines, dan competitive assessment. No generic advice. Bahasa Indonesia.",
+    "skills": [
+      "veron-webdev-agent"
+    ],
+    "skill": "veron-webdev-agent",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 */6 * * *",
+      "display": "0 */6 * * *"
+    },
+    "schedule_display": "0 */6 * * *",
+    "repeat": {
+      "times": 168,
+      "completed": 16
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-28T14:17:49.029179+07:00",
+    "next_run_at": "2026-06-01T18:00:00+07:00",
+    "last_run_at": "2026-06-01T12:03:41.897868+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:101",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "101"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "f6f18273aa75",
+    "name": "Iran-US News Real-Time Monitor",
+    "prompt": "Kamu adalah monitor Iran-US News. Eksekusi research cycle.\n\nFOLLOW SKILL: iran-us-news-monitor\n\n1. Load the skill\n2. Navigate ke https://www.iranintl.com/en \u2014 check LIVE section for latest Iran-US news\n3. Check https://www.aljazeera.com \u2014 Middle East section\n4. Compare dengan last known status: Draft MoU exists, Trump belum approve, Iran fire missile ke Kuwait (28 Mei), Rubio meetings Jumat 29 Mei\n5. Report only GENUINELY NEW developments \u2014 jika tidak ada update baru, tetap laporkan status terkini\n6. FORMAT OUTPUT DALAM BAHASA INDONESIA:\n\n```\n\ud83d\udce1 Iran-US News Update | [TIMESTAMP]\n\n\ud83d\udcf0 JUDUL BERITA: [judul]\n\ud83d\udccd SUMBER: [nama sumber + waktu lalu]\n\nPERKEMBANGAN TERBARU:\n- [poin baru 1 - tylko jika memang baru]\n- [poin baru 2]\n\nSTATUS SAAT INI:\n[Trump approved \u2705 / Belum approve \u274c / Escalation \ud83d\udd34 / Negotiating \u23f3]\n\n\ud83d\udccc KESIMPULAN:\n[Jelaskan apa arti perkembangan ini untuk situasi secara keseluruhan \u2014 apakah ini positif, negatif, atau netral. Berikan konteks singkat.]\n\nLINK: [URL sumber]\n```\n\n7. Deliver ke origin (current topic/thread)\n\nCATATAN: Bahasa Indonesia throughout. Kesimpulan harus ada setiap kali, even if brief. Erik wants to understand implications, bukan cuma facts.",
+    "skills": [
+      "iran-us-news-monitor"
+    ],
+    "skill": "iran-us-news-monitor",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "interval",
+      "minutes": 15,
+      "display": "every 15m"
+    },
+    "schedule_display": "every 15m",
+    "repeat": {
+      "times": null,
+      "completed": 197
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-29T11:46:56.783374+07:00",
+    "next_run_at": "2026-06-01T16:07:05.369688+07:00",
+    "last_run_at": "2026-06-01T15:52:05.369688+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:988",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "101"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "112eeb52e706",
+    "name": "LinkedIn Jobs Scraper",
+    "prompt": "Scrape LinkedIn jobs untuk Indonesia menggunakan patchright (require '/home/admin/node_modules/patchright'), lalu publish hasilnya ke thread 771 di Telegram.\n\nSTEPS:\n1. Launch browser: `const { chromium } = require('/home/admin/node_modules/patchright'); const browser = await chromium.launch({ headless: true });`\n2. Scrape 4 search terms: AI engineer, software engineer, data scientist, machine learning\n   - URL: `https://www.linkedin.com/jobs/search/?keywords=${term}&location=Indonesia&f_TPR=r604800`\n   - waitUntil: 'domcontentloaded', wait 3500ms, scroll to 400px\n3. Parse text dari document.body.innerText \u2014 pattern: job title (title case, 2-7 words, followed by duplicate line, then company, then location, then time with \"ago\")\n4. Deduplicate by title+company, limit 20 jobs\n5. Format Markdown dengan emoji\n6. Kirim pakai: send_message(action='send', target='telegram:5416939315:771', message='[formatted]')\n7. browser.close()\n\nDate format:\u5370\u5c3cformat (30 Mei 2026)\nTitle: \"\ud83e\udd16 LinkedIn Jobs \u2014 Indonesia\"",
+    "skills": [],
+    "skill": null,
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8,12,18 * * *",
+      "display": "0 8,12,18 * * *"
+    },
+    "schedule_display": "0 8,12,18 * * *",
+    "repeat": {
+      "times": null,
+      "completed": 7
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-30T12:48:46.455905+07:00",
+    "next_run_at": "2026-06-01T18:00:00+07:00",
+    "last_run_at": "2026-06-01T12:01:51.262896+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:771",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "5416939315",
+      "chat_name": "Erik",
+      "thread_id": null
+    },
+    "enabled_toolsets": [
+      "terminal",
+      "file",
+      "web"
+    ],
+    "workdir": "/home/admin",
+    "profile": "default"
+  },
+  {
+    "id": "7c95ffe7ebf4",
+    "name": "Erik Glints Jobs Scout",
+    "prompt": "Scrape AI/tech jobs from Glints Indonesia using Python script at /home/admin/.hermes/scripts/run-glints-jobs.sh. Output from the script is automatically delivered to this cron job's destination.",
+    "skills": [],
+    "skill": null,
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": "run-glints-jobs.sh",
+    "no_agent": true,
+    "context_from": null,
+    "schedule": {
+      "kind": "interval",
+      "minutes": 360,
+      "display": "every 360m"
+    },
+    "schedule_display": "every 360m",
+    "repeat": {
+      "times": null,
+      "completed": 9
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-30T13:21:17.248038+07:00",
+    "next_run_at": "2026-06-01T19:30:17.401365+07:00",
+    "last_run_at": "2026-06-01T13:30:17.401365+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:771",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "771"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "62699bfd8d3a",
+    "name": "Jelajah Article Generator",
+    "prompt": "Generate 1 new Indonesian travel article for Jelajah News Portal using the jelajah-article-generator.js script. Run node jelajah-article-generator.js and report the result to telegram:5416939315.",
+    "skills": [],
+    "skill": null,
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": "jelajah-article-generator.js",
+    "no_agent": true,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 0,12 * * *",
+      "display": "0 0,12 * * *"
+    },
+    "schedule_display": "0 0,12 * * *",
+    "repeat": {
+      "times": null,
+      "completed": 2
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-31T19:41:47.997881+07:00",
+    "next_run_at": "2026-06-02T00:00:00+07:00",
+    "last_run_at": "2026-06-01T12:01:52.129068+07:00",
+    "last_status": "error",
+    "last_error": "Script exited with code 1\nstderr:\nFile \"/home/admin/.hermes/scripts/jelajah-article-generator.js\", line 5\n    * Schedule: Daily at 07:00 and 19:00 (Indonesia timezone)\n                         ^\nSyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers",
+    "last_delivery_error": null,
+    "deliver": "telegram:5416939315",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "5416939315",
+      "chat_name": "Erik",
+      "thread_id": null
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "16e6dea9daf3",
+    "name": "Saham Agent \u2014 Daily Portfolio Scan",
+    "prompt": "Kamu adalah Saham Agent. Eksekusi daily portfolio scan dan kirim hasil ke thread 915.\n\n## WORKFLOW:\n\n1. Check tracked stocks di memory:\n```\npython3 ~/.hermes/agents/saham-agent/scripts/memory_manager.py list\n```\n\n2. Analyze tracked stocks yang punya view (BUY/AVOID/etc):\n```\npython3 ~/.hermes/agents/saham-agent/scripts/stock-analyze.py BBRI.JK AKRA.JK BBCA.JK\n```\n\n3. Run GitHub quick scan untuk new tools:\n```\npython3 ~/.hermes/agents/saham-agent/scripts/self_upgrade.py --quick\n```\n\n4. Format results sebagai message ke thread 915:\n\n```\n\ud83d\udcca SAHAM AGENT \u2014 Daily Scan [tanggal]\n\n\ud83e\udde0 PORTFOLIO TRACKED:\n| Ticker | View | Last Analyzed |\n|--------|------|---------------|\n| BBRI | BUY | 2026-05-31 |\n| AKRA | BUY | 2026-05-31 |\n| BBCA | BUY | 2026-05-31 |\n| MDKA | AVOID | 2026-05-31 |\n\n\ud83d\udcc8 TODAY'S TOP PICKS (from fresh analysis):\n[Insert summary table from stock-analyze output]\n\n\ud83d\udd27 GITHUB UPGRADE STATUS:\n[Insert upgrade scan results - only if new tools found]\n\n\ud83d\udca1 INSIGHT OF THE DAY:\n[Berikan 1 insight singkat based on data - apa yang\u503c\u5f97\u5173\u6ce8/\u9700\u8981\u6ce8\u610f]\n\n\u23f0 Data: Yahoo Finance (IDX) + SEC EDGAR (US)\n_Analisis \u2260 nasihat investasi. Do your own DD. \ud83d\udd0d_\n```\n\n5. Save each analysis to memory:\n```\npython3 ~/.hermes/agents/saham-agent/scripts/saham-agent.py analyze [TICKER]\n```\n\n## DELIVERY:\n- Target: telegram:5416939315:915 (thread 915)\n- Format: Bahasa Indonesia, terse, data-driven\n- Timing: 08:00 WIB (before market open 09:00)\n\n## SKILLS:\nLoad: saham-analyzer",
+    "skills": [
+      "saham-analyzer"
+    ],
+    "skill": "saham-analyzer",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 8 * * 1-5",
+      "display": "0 8 * * 1-5"
+    },
+    "schedule_display": "0 8 * * 1-5",
+    "repeat": {
+      "times": null,
+      "completed": 1
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-31T20:43:56.145704+07:00",
+    "next_run_at": "2026-06-02T08:00:00+07:00",
+    "last_run_at": "2026-06-01T08:03:31.451497+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:915",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "915"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  },
+  {
+    "id": "c874d5544cdb",
+    "name": "Saham Agent \u2014 Weekly GitHub Tool Upgrade",
+    "prompt": "Kamu adalah Saham Agent. Eksekusi self-upgrade scan dan kirim laporan ke thread 915.\n\n## WORKFLOW:\n\n1. Run full self-upgrade scan (bukan --quick, tapi full install):\n```\npython3 ~/.hermes/agents/saham-agent/scripts/self_upgrade.py\n```\n\n2. Check upgrade log:\n```\npython3 ~/.hermes/agents/saham-agent/scripts/memory_manager.py upgrades\n```\n\n3. Format results:\n\n```\n\ud83d\udd27 SAHAM AGENT \u2014 Weekly Self-Upgrade\n\n\ud83d\udce1 GitHub Tool Scan Results:\n[Insert full upgrade output]\n\n\ud83d\udce6 Tools Added This Week:\n[If any tools were installed, list them with repo URL and what they do]\n[If none, say \"No new tools installed this week \u2014 existing stack is current\"]\n\n\ud83d\udee0\ufe0f Current Installed Tools:\n- stock-analyze.py (unified US+IDX analyzer)\n- edgar.py (SEC EDGAR XBRL)\n- market.py (price fetcher)\n- saham-analyze.py (IDX screener)\n- self_upgrade.py (GitHub auto-upgrade)\n- memory_manager.py (persistent memory)\n\n\ud83d\udca1 Capability Note:\n[One sentence about any new capability added or notable absence]\n```\n\n4. If new tools were installed, test the most interesting one briefly:\n```\npython3 ~/.hermes/agents/saham-agent/scripts/[new_tool_name] --help 2>&1 | head -10\n```\n\n## DELIVERY:\n- Target: telegram:5416939315:915\n- Format: Bahasa Indonesia, terse\n- Schedule: Every Monday 09:00 WIB (after market opens, give time for API rate limit reset)\n\n## SKILLS:\nLoad: saham-analyzer",
+    "skills": [
+      "saham-analyzer"
+    ],
+    "skill": "saham-analyzer",
+    "model": null,
+    "provider": null,
+    "base_url": null,
+    "script": null,
+    "no_agent": false,
+    "context_from": null,
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 9 * * 1",
+      "display": "0 9 * * 1"
+    },
+    "schedule_display": "0 9 * * 1",
+    "repeat": {
+      "times": null,
+      "completed": 1
+    },
+    "enabled": true,
+    "state": "scheduled",
+    "paused_at": null,
+    "paused_reason": null,
+    "created_at": "2026-05-31T20:44:11.385975+07:00",
+    "next_run_at": "2026-06-08T09:00:00+07:00",
+    "last_run_at": "2026-06-01T09:02:54.019002+07:00",
+    "last_status": "ok",
+    "last_error": null,
+    "last_delivery_error": null,
+    "deliver": "telegram:-1003773236743:915",
+    "origin": {
+      "platform": "telegram",
+      "chat_id": "-1003773236743",
+      "chat_name": "Development",
+      "thread_id": "915"
+    },
+    "enabled_toolsets": null,
+    "workdir": null,
+    "profile": null
+  }
+]

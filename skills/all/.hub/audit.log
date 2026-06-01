@@ -1,0 +1,5 @@
+2026-05-28T04:51:44Z INSTALL agentmail official:builtin dangerous sha256:6e11274d6038cf0e
+2026-05-28T04:51:55Z INSTALL excel-author official:builtin safe sha256:a7b50cbb3ad67441
+2026-05-28T04:52:06Z INSTALL openhands official:builtin safe sha256:52b5ae34263fbd4c
+2026-05-28T04:52:07Z INSTALL pinggy-tunnel official:builtin dangerous sha256:e3068d936a7b5b07
+2026-05-28T04:52:08Z INSTALL honcho official:builtin dangerous sha256:1fb55ee9e3108355
