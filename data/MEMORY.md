@@ -1,21 +1,13 @@
-Repliz API: only accepts video type (201). Text-only → 500 error. Link → 400 "meta required". Accounts: YouTube @sosokberbicara (6a123e004492e5f5a8f83ded), TikTok @sosokbicaraclip (6a119ad84492e5f8f82fe4), Threads @eric_ai_traderfx (69fd8b28877ca2e454040e50).
+Bundled skills (website-workflow, premium-company-profile) CANNOT be patched by me — created_by=None. If a lesson applies to those skills, save to memory only.
 §
-Erik collaborates via Telegram threads — affiliate topics: thread 538, Jelajah AI project: thread 1400. Always include thread context when sharing project updates.
+Erik: KasirFlow owner (5 users/day goal). Telegram 5416939315. Speaks casual Bahasa Indonesia. Rule: "bagus dulu baru kasih". Backup before major builds.
 §
-Website request → call Veron subagent (veron-webdev-agent) → build → upload to digitalnusa.com/[folder] → send link to Erik.
+CV pipeline: weasyprint venv /home/admin/.cv-venv (fitz hanya di python3 sistem). Skill: cv-tailoring.
 §
-Erik likes light theme for websites. Hates "tidak pasaran" (generic/template-looking outputs). Common palette: navy + teal + gold. Uses Outfit font for Indonesian client work. Always serve via HTTP link for download.
+Hermes/KasirFlow: /home/admin/hermes-orchestrator/ Phase 1-4. COO KasirFlow: orchestrator/coo_kasirflow.py. DataLead v2: digitalnusa.com/datalead PIN:2417. Server: chmod 644, Cloudflare ?v=, backup before edit.
 §
-SEO teammate — Erik's SEO & AI Search Domination agent. Outputs ONLY to thread 1623. Skill: skills/seo-ai-search-domination. Workspace: ~/seo-candibentar/
+Erik tracking: Telegram 5416939315. FinFlow PENDING pos_sale_items.product_id=0 bug.
 §
-Erik explores new projects/ideas via Antigravity (outsourced dev). Created PRDs at digitalnusa.com/[folder]: AI Meeting Notes (PWA, Whisper+GPT, WhatsApp) and TANI HUB B2B Agri Marketplace. Both from scratch concept phase.
+Erik desain: teal #009F75, Outfit font, animated hero, asymmetric. Anti-template: NO neon/Inter/3-col/cute. Rule: "bagus dulu baru kasih". M3 UI skill installed at ~/.hermes/skills/material-design-3-ui/.
 §
-Erik mau research bikin website mirip bumidigital.com — AI content generation SaaS (video & image gen berbayar, credit-based system).
-§
-Erik mau progress indicator —看不到我在做什么会不耐烦. Multi-step tasks: mulai dengan [1/3] step progress.
-§
-Erik interested in AI marketing automation agent (Claude Coworker workflow: Ad research → creative gen → post → weekly cron). Prefers AI Social Media Agent (Clipper + Repliz) over Meta Ads. Existing: Clipper workflow, Repliz API (YouTube/TikTok/Threads).
-§
-Machine at /home/admin/domains/digitalnusa.com/public_html/ IS the live web root — files written there = immediately live at digitalnusa.com/<folder>/. SSH port 22 and DA port 2222 are firewalled outbound from this machine.
-§
-Erik Rp 25jt June 2026: 10jt USD, 8jt IDX stocks, 7jt cash+pay debt. No emas (harga tinggi). Saham agent: daily scan weekday 08:00 WIB, weekly upgrade Monday 09:00 WIB, deliver to thread 915.
+Erik communicates in informal Bahasa Indonesia. Keep responses short, direct, use emoji sparingly. Don't use verbose AI phrases like 'Tentu!' or 'Baik!'. Just answer.

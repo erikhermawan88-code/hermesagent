@@ -1,7 +1,9 @@
-Erik (38tahun). Finance: Rp 9jt/bulan gross, Rp 2jt/bulan savings (22%). No assets, debt Rp 1jt. Skills: AI enthusiast + Ecommerce spec + Digital Marketing + Team Lead. Target: Rp 10M net worth 10 tahun. Akan dapat Rp 25jt (15 Juni). Wants deep research. Follow 1998 pattern — bangun usaha sekarang, jadi besar 2031. Thesis: Agriculture Infrastructure + AgTech (food sovereignty). Communication: Bahasa Indonesia, terse, incremental: 1 sample → review → proceed. Prefers HTTP link. Light theme. Hates "tidak pasaran". NO ecommerce flip. Active di Clipper Team Telegram.
+Hermes Holdings setup lengkap: ~/hermes-company/ (org-chart, agents.json, pipelines, coo/), COO Agent cron 07:30 WIB, clipper audit: digitalnusa.com/hermes-holdings/clipper-audit.html. Detail-oriented soal quality output (cth: subtitle 25pt terlalu besar). Minta hasil = link web di digitalnusa.com.
 §
-Erik: creative freedom — NO palette/font constraints. Unique design, tidak pasaran. Incremental: 1 sample → review → proceed. Website request → Veron subagent + skills: popular-web-designs + claude-design + ui-ux-audit + gsap-animation → upload digitalnusa.com/[folder].
+CV v3 (Agu 2026): ~/cv-eric-2026/ + digitalnusa.com/cv-eric-2026/, semua role (Taman Safari/Greenara/Stramm) ditulis 'E-commerce & Digital Marketing Manager'. Suka kirim referensi desain (cth: ERP Tableware) sebagai acuan UI.
 §
-Erik prefers incremental testing: want to see 1 sample clip first before generating all clips. Workflow: test first → review → proceed. Video clips stored at /root/clipper-company/clips/
+Fokus bisnis baru (Agt 2026): TikTok Shop affiliate, niche elektronik, target Rp 1jt pertama. Erik bikin video; agent maintain caption+strategi di command center digitalnusa.com/affiliate/ (skill: tiktok-affiliate). Tertarik otomasi (MoneyPrinterTurbo) tapi sadar risiko shadowban. Komunikasi santai (gw/lo/bro).
 §
-Clip preferences: wants dynamic face-cut (OpenCV Haar cascade for face detection + smart center-crop on speaker), Indonesian subtitle font size 15, skip subtitle if no Indonesian available. Reviews clips one-at-a-time before full batch.
+Backup dulu sebelum edit file produksi.
+§
+Suka logo BESAR (navbar 120px, footer 110px; jangan kecilkan tanpa diminta), sering iterasi zoom/crop berulang sampai pas. Logo DN landscape (1280x395): client/assets/img/logo.png + assets/images/logo.png + favicon.ico.
